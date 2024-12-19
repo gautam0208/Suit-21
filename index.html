@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suit 21</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Suit 21 Card Game</h1>
+    <div id="setup">
+        <h2>Game Setup</h2>
+        <label for="numPlayers">Number of Players (2-6):</label>
+        <input type="number" id="numPlayers" min="2" max="6" >
+        <label for="numGames">Number of Games:</label>
+        <input type="number" id="numGames" min="1" >
+        <div id="playerNames"></div>
+        <button id="startGame">Start Game</button>
+    </div>
+
+    <div id="game" style="display: none;">
+        <h2 id="gameRound">Game Round 1</h2>
+        <div class="current-turn" id="currentTurn"></div>
+        <div id="players"></div>
+        <div class="controls">
+            <button id="replay" onclick="toggleReplay()">Replay Game</button>
+        </div>
+        <div class="log" id="gameLog"></div>
+    </div>
+
+    <div id="replaySection" class="replay-section" style="display: none;">
+        <h2>Replay Section</h2>
+        <div id="replayGames"></div>
+    </div>
+
+    <div id="summarySection" class="summary-section" style="display: none;">
+        <h2>Game Summary</h2>
+        <div id="playerSummary"></div>
+        <h3 id="overallWinner"></h3>
+
+        <div class="controls" style="float:inline-end;">
+            <button id="playAgain">Play Again</button>
+        </div>
+
+        <div class="controls" >
+            <button id="replay" onclick="toggleReplay()">Replay Game</button> 
+        </div>
+
+    </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
